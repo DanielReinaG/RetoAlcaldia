@@ -1,0 +1,106 @@
+{% include 'sitio/cabecera.html' %}
+<!--SLIDES-->
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/Secretaria.png" class="rounded mx-auto d-block w-100" alt="..."  width="400px" height="300px" >
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Secretaria.png" class="d-block w-100" alt="..." width="400px" height="300px">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br>
+<!--SLIDES-->
+<!--Categorias-->
+<div>
+  <h5>Libros</h5>
+</div>
+<!--TARJETAS-->
+<div class="row row-cols-1 row-cols-md-5 g-4">
+  {% for libro in libros %}
+  <div class="col">
+    <div class="card">
+      <img src="/img/{{libro[2]}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{libro[1]}}</h5>
+        <p class="card-text"> <a name="" id="" class="btn btn-primary" href=" {{libro[3]}} " role="button">Visitar</a></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!--Categorias-->
+<br>
+<div>
+  <h5>Ropa</h5>
+</div>
+<!--TARJETAS-->
+<div class="row row-cols-1 row-cols-md-5 g-4">
+  {% for libro in libros %}
+  <div class="col">
+    <div class="card">
+      <img src="/img/{{libro[2]}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{libro[1]}}</h5>
+        <p class="card-text"> <a name="" id="" class="btn btn-primary" href=" {{libro[3]}} " role="button">Visitar</a></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<br>
+<div>
+  <h5>Tecnologia</h5>
+</div>
+<!--TARJETAS-->
+<div class="row row-cols-1 row-cols-md-5 g-4">
+  {% for libro in libros %}
+  <div class="col">
+    <div class="card">
+      <img src="/img/{{libro[2]}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{libro[1]}}</h5>
+        <p class="card-text"> <a name="" id="" class="btn btn-primary" href=" {{libro[3]}} " role="button">Visitar</a></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<br>
+<div>
+  <h5>Salud & Belleza</h5>
+</div>
+<!--TARJETAS-->
+<div class="row row-cols-1 row-cols-md-5 g-4">
+  {% for libro in libros %}
+  <div class="col">
+    <div class="card">
+      <img src="/img/{{libro[5]}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{libro[1]}}</h5>
+        <p class="card-text"> <a name="" id="" class="btn btn-primary" href=" {{libro[7]}} " role="button">Visitar</a></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+
+{% include 'sitio/pie.html' %}
+ 

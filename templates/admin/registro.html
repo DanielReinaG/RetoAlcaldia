@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Registro Admin</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4">
+                <br>
+                <div class="card">
+                    <div class="card-header">
+                        Registro de comerciante
+                    </div>
+                    <div class="card-body">
+                        <form action="/registro/guardar" method="post" enctype="multipart/form-data">
+
+                            <div class="mb-3">
+                              <label for="txtNombreR" class="form-label">Nombre:</label>
+                              <input type="text"
+                                class="form-control" name="txtNombreR" id="txtNombreR" aria-describedby="helpId" placeholder="Escriba su nombre" required="required">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtApellidoR" class="form-label">Apellido:</label>
+                                <input type="text"
+                                  class="form-control" name="txtApellidoR" id="txtApellidoR" aria-describedby="helpId" placeholder="Escriba su apellido" required="required">
+                              </div>
+
+                            <div class="mb-3">
+                                <label for="txtCorreoR" class="form-label">Correo electronico:</label>
+                                <input type="text"
+                                  class="form-control" name="txtCorreoR" id="txtCorreoR" aria-describedby="helpId" placeholder="Escriba su email" required="required">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtLocalcomercialR" class="form-label">Nombre del local comercial:</label>
+                                <input type="text"
+                                  class="form-control" name="txtLocalcomercialR" id="txtLocalcomercialR" aria-describedby="helpId" placeholder="Nombre de su local comercial" required="required">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtUbicacionR" class="form-label">Ubicación:</label>
+                                <input type="text"
+                                  class="form-control" name="txtUbicacionR" id="txtUbicacionR" aria-describedby="helpId" placeholder="Escriba la ubicación del local" required="required">
+                            </div>
+                            <div class="mb-3">
+                              <label for="txtProductoR" class="form-label">Tipo de producto:</label>
+                              <input type="text"
+                                class="form-control" name="txtProductoR" id="txtProductoR" aria-describedby="helpId" placeholder="Escriba la categoria de productos que vende" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="txtPasswordR" class="form-label">Contraseña</label>
+                                <input type="password"
+                                  class="form-control" name="txtPasswordR" id="txtPasswordR" aria-describedby="helpId" placeholder="Digite una contraseña" required="required">
+                            </div>
+                            <!--<div class="mb-3" for="txtProductoR">
+                                <label  class="form-label">Tipo de productos:</label>
+                                <div class="input-group mb-3">
+                                    <select class="form-select" for="txtProductoR" id="select1">
+                                      <option selected>Elija una opción</option>
+                                      <option value="1">Salud & Belleza</option>
+                                      <option value="2">Tecnologia</option>
+                                      <option value="3">Alimentos</option>
+                                      <option value="4">Libros</option>
+                                      <option value="5">Ropa</option>
+                                    </select>
+                                </div>
+                            </div>-->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success">Registrarse</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                
+            </div>
+            
+        </div>
+    </div>
+    <br>
+  
+  
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

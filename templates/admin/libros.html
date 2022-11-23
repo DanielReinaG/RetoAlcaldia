@@ -1,0 +1,131 @@
+{% include 'admin/cabecera.html' %}
+<br/>
+<div class="container">
+    <div class="row">
+        <!--CONTENIDO DEL 1ER COLUMNA REGISTRO DATOS-->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Datos del libro
+                </div>
+                <!--FORMULARIO AGREGAR LIBROS-->
+                <div class="card-body">
+                    <form action="/admin/libros/guardar" method="post" enctype="multipart/form-data">
+                        <!--NOMBRE-->
+                        <div class="mb-3">
+                          <label for="txtNombre" class="form-label">Nombre:</label>
+                          <input type="text"
+                            class="form-control" name="txtNombre" id="txtNombre" aria-describedby="helpId" placeholder="Escriba el nombre del libro">
+                        </div>
+                        <!--PRECIO-->
+                        <div class="mb-3">
+                            <label for="txtPrecioreal" class="form-label">Precio:</label>
+                            <input type="number"
+                              class="form-control" name="txtPrecioreal" id="txtPrecioreal" aria-describedby="helpId" placeholder="Precio sin descuento">
+                          </div>
+                          <!--PRECIO %-->
+                        <div class="mb-3">
+                            <label for="txtPreciodesc" class="form-label">Precio-descuento:</label>
+                            <input type="number"
+                              class="form-control" name="txtPreciodesc" id="txtPreciodesc" aria-describedby="helpId" placeholder="Precio con descuento">
+                          </div>
+                          <!--CULMINACION-->
+                        <div class="mb-3">
+                            <label for="txtCulminacion" class="form-label">Culmina descuento:</label>
+                            <input type="date"
+                              class="form-control" name="txtCulminacion" id="txtCulminacion" aria-describedby="helpId" placeholder="Fecha culminacion del descuento">
+                          </div>
+                        <!--IMAGEN PRINCIPAL-->
+                        <div class="mb-3">
+                            <label for="txtImagen1" class="form-label">Imagen principal:</label>
+                            <input type="file"
+                              class="form-control" name="txtImagen1" id="txtImagen1" aria-describedby="helpId" placeholder="Seleccione la imagen">
+                          </div>
+                        <!--URL-->
+                        <!--IMAGEN-2-->
+                        <div class="mb-3">
+                            <label for="txtImagen2" class="form-label">Imagen secundaria:</label>
+                            <input type="file"
+                              class="form-control" name="txtImagen2" id="txtImagen2" aria-describedby="helpId" placeholder="Seleccione la imagen">
+                          </div>
+                        <!--URL-->
+                          <div class="mb-3">
+                            <label for="txtURL" class="form-label">URL sitio:</label>
+                            <input type="text"
+                              class="form-control" name="txtURL" id="txtURL" aria-describedby="helpId" placeholder="Escriba la URL del sitio">
+                          </div>
+                        <!--BOTON AGREGAR-->
+                        <button type="submit" class="btn btn-primary">Agregar</button>
+
+                    </form>
+                </div>
+                <!-- CIERRRE FORMULARIO-->
+
+                <div class="card-footer text-muted">    
+                </div>
+            </div>
+            <!--CONTENIDO DEL 1ER COLUMNA REGISTRO DATOS-->
+        </div>
+        <div class="col-md-8">
+<br/>
+
+<!--VISUALIZACION TABLA DATOS-->
+<div class="table-responsive" >
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio real</th>
+                <th scope="col">Precio %</th>
+                <th scope="col">Fecha finalizacion</th>
+                <th scope="col">Imagen 1ra</th>
+                <th scope="col">Imagen 2da</th>
+                <th scope="col">URL</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Lee los DATOS DE LA BD-->
+            {% for libro in libros %}
+            <tr>
+                <!--{libro[0]} representa los indices de las columnas de la BD-->
+                <td scope="row"> {{libro[0]}} </td>
+                <td>{{libro[1]}}</td>
+                <td>{{libro[2]}}</td>
+                <td>{{libro[3]}}</td>
+                <td>{{libro[4]}}</td>
+                <td>
+                    <img width="60" src="/img/{{libro[5]}}" class="img-fluid rounded-top" alt="">
+                    <!--{{libro[2]}}-->
+                </td>
+                <td>
+                    <img width="60" src="/img/{{libro[6]}}" class="img-fluid rounded-top" alt="">
+                    <!--{{libro[2]}}-->
+                </td>
+                <td>
+                    
+                    <a name="" id="" class="btn btn-success" href="{{libro[7]}}" role="button">Enlace</a>
+                    
+                </td>
+                <td>
+                    <!--ACCION DE ELIMINAR EN LA BD-->
+                    <form action="/admin/libros/borrar" method="post">
+                        <input  value="{{libro[0]}}" type="hidden" name="txtID" id="txtID">
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+            <!--Lee los DATOS DE LA BD-->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+        </div>
+        
+    </div>
+</div>
+
+
+{% include 'admin/pie.html' %}
+
